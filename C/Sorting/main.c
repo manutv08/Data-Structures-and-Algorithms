@@ -1,6 +1,7 @@
 #include<stdio.h>
 
 void quickSort(int array[], int left, int right);
+void insertSort(int array[], int size);
 
 // function to print array elements
 void printArray(int array[], int size) {
@@ -10,16 +11,32 @@ void printArray(int array[], int size) {
   printf("\n");
 }
 
-void main(){
-    int array[] = {6, 2, 9, 5, 3, 8, 7, 1, 4};
-    //int array[] = {9,8,1,2,7,6,4,5,3};
-    int n = sizeof(array)/sizeof(array[0]);
+void main()
+{
 
-    printf("Unsorted Array\n");
-    printArray(array, n);
+  //Insertion Sorting
+  int arrayInsertionSort[] = {7, 5, 1, 9, 3};
+  size_t nInsert= sizeof(arrayInsertionSort)/sizeof(arrayInsertionSort[0]);
 
-    quickSort(array, 0, n-1);
+  printf("\t\t\tInsertion Sort\n");
+  printf("Unsorted Array\n");
+  printArray(arrayInsertionSort, nInsert);
 
-    printf("Sorted Array\n");
-    printArray(array, n);
+  insertSort(arrayInsertionSort, nInsert);
+
+  printf("Sorted Array\n");
+  printArray(arrayInsertionSort, nInsert);
+
+  //Quick Sorting
+  int arrayQuickSort[] = {6, 2, 9, 5, 3, 8, 7, 1, 4};
+  size_t nQuick = sizeof(arrayQuickSort)/sizeof(arrayQuickSort[0]);
+
+  printf("\t\t\tQuick Sort\n");
+  printf("Unsorted Array\n");
+  printArray(arrayQuickSort, nQuick);
+
+  quickSort(arrayQuickSort, 0, nQuick-1);
+
+  printf("Sorted Array\n");
+  printArray(arrayQuickSort, nQuick);
 }
