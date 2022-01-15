@@ -2,6 +2,7 @@
 
 void quickSort(int array[], int left, int right);
 void insertSort(int array[], int size);
+void radixSort(int array[], int pockets, int n);
 
 // function to print array elements
 void printArray(int array[], int size) {
@@ -39,4 +40,18 @@ void main()
 
   printf("Sorted Array\n");
   printArray(arrayQuickSort, nQuick);
+
+  //Radix Sorting
+  int arrayRadixSort[] = {727, 345, 982, 821, 527, 833, 742, 203, 731, 917};
+  size_t nRadix= sizeof(arrayRadixSort)/sizeof(arrayRadixSort[0]);
+
+  printf("\t\t\tRadix Sort\n");
+  printf("Unsorted Array\n");
+  printArray(arrayRadixSort, nRadix);
+
+  radixSort(arrayRadixSort, 10, nRadix);
+
+  printf("Sorted Array\n");
+  printArray(arrayRadixSort, nRadix);
+
 }
