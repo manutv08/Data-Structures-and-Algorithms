@@ -1,8 +1,5 @@
 #include<stdio.h>
-
-void quickSort(int array[], int left, int right);
-void insertSort(int array[], int size);
-void radixSort(int array[], int pockets, int n);
+#include "mySorting.h"
 
 // function to print array elements
 void printArray(int array[], int size) {
