@@ -1,6 +1,6 @@
 # -*- MakeFile -*-
 
-CFLAGS= -g 
+CFLAGS=-Wall -g 
 BINS=a.out lib_mysort.so runtime_a.out lib_mysortstatic.a static_a.out
 all: $(BINS)
 

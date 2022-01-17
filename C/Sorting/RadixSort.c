@@ -68,12 +68,12 @@ void radixSort(int array[], int pockets, int n){
     }
     
     int index = 0, temp = -1, i,j,k;
-    for (size_t i = 0; i < numDigits; i++)
+    for (i = 0; i < numDigits; i++)
     {
-        for (size_t j = 0; j < n; j++)
+        for (j = 0; j < n; j++)
         {
             temp = array[j];
-            for (size_t k = 0; k <= i; k++)
+            for (k = 0; k <= i; k++)
             {
                 index = temp%pockets;
                 temp = temp/pockets;
@@ -96,5 +96,5 @@ void radixSort(int array[], int pockets, int n){
         }
          
     }
-    
+    free(qarray);
 }

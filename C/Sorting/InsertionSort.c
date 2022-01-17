@@ -1,7 +1,7 @@
 void insertSort(int array[], int n){
     int i,j,temp;
 
-    for (int i = 1; i < n; i++)
+    for (i = 1; i < n; i++)
     {
         temp = array[i];
         j=i-1;
