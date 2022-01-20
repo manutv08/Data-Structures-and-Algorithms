@@ -43,10 +43,6 @@ Node* removeBST(int num, Node *p){
         else if(num > p->data){
             p->right = removeBST(num,p->right);
         }
-        else if (p->left == NULL && p->right ==NULL)
-        {
-            p=NULL;
-        }
         else if(p->left == NULL){
             p = p->right;
         }
@@ -54,8 +50,7 @@ Node* removeBST(int num, Node *p){
             p = p->left;
         }
         else{
-            Node *t = findMin(p->right);
-            p->data = t->data;
+            p->data = findMin(p->right)->data;
             p->right = removeBST(p->data, p->right);
         }
     }
