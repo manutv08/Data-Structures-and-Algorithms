@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include"myTrees.h"
-void main(){
+int main(){
 
     //Binary Search Tree
     printf("\t\t\tBinary Search Tree\n");
@@ -13,13 +13,13 @@ void main(){
     tree = insertBST(9,tree);
 
     printf("The tree is: ");
-    traverseBST(tree);
+    traverse(tree);
     printf("\n");
 
     tree = removeBST(6, tree);
 
     printf("After removing 6 the tree is: ");
-    traverseBST(tree);
+    traverse(tree);
     printf("\n\n");
 
     //AVL Tree
@@ -37,6 +37,8 @@ void main(){
     tree = insertAVL(18, tree, &heightIncreased);
 
     printf("The AVL tree is: ");
-    traverseAVL(tree);
+    traverse(tree);
     printf("\n\n");
+
+    return 0;
 }

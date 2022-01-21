@@ -142,6 +142,3 @@ Node *insertAVL(int num, Node *p, bool *heightIncreased){
    return p;
 }
 
-void traverseAVL(Node *p){
-   traverseBST(p);
-}

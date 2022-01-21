@@ -12,7 +12,10 @@ BinarySearchTree.o: BinarySearchTree.c
 AVLtree.o: AVLtree.c 
 	$(CC) $(CFLAGS) -c $^
 
-lib_mytreesstatic.a: BinarySearchTree.o AVLtree.o
+myNodes.o: myNodes.c 
+	$(CC) $(CFLAGS) -c $^
+
+lib_mytreesstatic.a: BinarySearchTree.o AVLtree.o myNodes.o
 	ar rcs $@ $^ 
 
 lib_mytreesdynamic.so: *.o 
@@ -21,7 +24,7 @@ lib_mytreesdynamic.so: *.o
 main.o : main.c
 	$(CC) $(CFLAGS) -c $^ -o $@
 
-a.out: main.o BinarySearchTree.o AVLtree.o
+a.out: main.o BinarySearchTree.o AVLtree.o myNodes.o
 	$(CC) $(CFLAGS) -o $@ $^
 
 static_a.out: main.o

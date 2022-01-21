@@ -58,23 +58,3 @@ Node* removeBST(int num, Node *p){
     }
     return p;
 }
-
-
-void traverseBST(Node *p){
-    if(p != NULL){
-        if (p->left != NULL)
-        {
-            traverseBST(p->left);
-        }
-
-        printf(" %d", p->data);
-
-        if (p->right != NULL)
-        {
-            traverseBST(p->right);
-        }
-    }
-    else{
-        printf("Treee is empty");
-    }
-}
