@@ -3,13 +3,12 @@
 #include"myTrees.h"
 
 Node* insertBST(int num, Node *p){
-    Node *newp = (Node *) malloc(sizeof(Node));
-    newp->data = num;
-    newp->left = NULL;
-    newp->right = NULL;
 
    if(p == NULL) {
-      p = newp;
+      p= (Node *) malloc(sizeof(Node));
+      p->data = num;
+      p->left = NULL;
+      p->right = NULL;
    }
    else if (num < p->data)
    {
