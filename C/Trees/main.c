@@ -40,5 +40,19 @@ int main(){
     traverse(tree);
     printf("\n\n");
 
+    //Red Black Tree
+
+    printf("\t\t\tRed Black Tree\n");
+    NodeRB *treeRB = NULL;
+    int arrayRedBlackTree[] = {10, 18, 7, 15, 16, 30, 25, 40, 60, 2, 1, 70};
+    for(int i=0; i < 12; i++)
+    {
+        NodeRB * newp = createNewNode(arrayRedBlackTree[i]);
+         treeRB = insertRedBlack(newp, treeRB);
+    }
+
+    printf("The Red Black tree is: ");
+    traverse((Node *)treeRB);
+    printf("\n\n");
     return 0;
 }

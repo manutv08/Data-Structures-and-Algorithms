@@ -9,5 +9,14 @@ typedef struct node
 }Node;
 
 
+typedef struct nodeRedBlack
+{
+    int data;
+    enum {black, red} color;
+    struct nodeRedBlack *left;
+    struct nodeRedBlack *right;
+    struct nodeRedBlack *parent;
+}NodeRB;
+
 void traverse(Node *p);
 #endif
