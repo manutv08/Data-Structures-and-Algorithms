@@ -35,8 +35,8 @@ graph
 
     LINK -- <em>- Brings together object files to produce executable.</em> --> OUT[/a.out/]
 
-    classDef powderB fill:#B0E0E6;
-    class main,main_exp,MAINasmb,MAINobj,OUT powderB
+    %%classDef powderB fill:#B0E0E6;
+    %%class main,main_exp,MAINasmb,MAINobj,OUT powderB
 
 ```
  This is the reason why sometimes compilers are known as toolchain, because of the chain of tools involved in the process of compilation. 
